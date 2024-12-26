@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation Git et Git Flow</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Simulation Git et Git Flow</h1>
+    <p>Suivez un workflow Git réaliste étape par étape.</p>
+  </header>
+
+  <main>
+    <div id="layout">
+      <section id="simulator">
+        <h2>Simulation Git</h2>
+
+        <div id="visualization">
+          <p>Position actuelle : <span id="current-branch">Aucun repository initialisé</span></p>
+          <div id="branches"></div>
+        </div>
+
+        <div id="file-editor" style="display: none;">
+          <h3>Fichier simulé : <span id="file-name">fichier.txt</span></h3>
+          <textarea id="file-content" placeholder="Écrivez ici..."></textarea>
+          <button onclick="saveChanges()" disabled id="btn-save">Enregistrer les modifications</button>
+        </div>
+
+        <div id="commands">
+          <h3>Commandes disponibles</h3>
+          <button onclick="gitCommand('init')" id="btn-init">git init</button>
+          <button onclick="gitCommand('branch-dev')" id="btn-branch-dev" disabled>Créer branche dev</button>
+          <button onclick="gitCommand('checkout-dev')" id="btn-checkout-dev" disabled>git checkout dev</button>
+          <button onclick="gitCommand('create-file')" id="btn-create-file" disabled>Créer fichier</button>
+          <button onclick="gitCommand('add')" id="btn-add" disabled>git add</button>
+          <button onclick="gitCommand('commit')" id="btn-commit" disabled>git commit</button>
+          <button onclick="gitCommand('push')" id="btn-push" disabled>git push</button>
+          <button onclick="gitCommand('checkout-main')" id="btn-checkout-main" disabled>git checkout main</button>
+        </div>
+      </section>
+
+      <section id="console-output">
+        <h3>Console</h3>
+        <div id="output-log"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 - Simulation Git Flow</p>
+  </footer>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
