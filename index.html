@@ -31,7 +31,7 @@
         <div id="commands">
           <h3>Commandes disponibles</h3>
           <button onclick="gitCommand('init')" id="btn-init">git init</button>
-          <button onclick="gitCommand('branch-dev')" id="btn-branch-dev" disabled>Créer branche dev</button>
+          <button onclick="gitCommand('branch-dev')" id="btn-branch-dev" disabled>git flow feature start dev</button>
           <button onclick="gitCommand('checkout-dev')" id="btn-checkout-dev" disabled>git checkout dev</button>
           <button onclick="gitCommand('create-file')" id="btn-create-file" disabled>Créer fichier</button>
           <button onclick="gitCommand('add')" id="btn-add" disabled>git add</button>
@@ -47,10 +47,6 @@
       </section>
     </div>
   </main>
-
-  <footer>
-    <p>&copy; 2024 - Simulation Git Flow</p>
-  </footer>
   <script src="scripts/app.js"></script>
 </body>
 </html>
